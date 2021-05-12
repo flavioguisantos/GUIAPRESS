@@ -1,0 +1,42 @@
+
+<%- include ('../../partials/header.ejs') %>
+<%- include ('../../partials/navbar.ejs') %>
+   
+    <div class="container">
+        <hr>
+        <div class="card">
+            <div class="card-header">
+                <h2>Relação Prioritária de Transferência</h2>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="/categories/save">
+                    <input class="form-control" type="text" name="OrigemGrandeComando" placeholder="Origem Grande Comando"> <br>
+                    <input class="form-control" type="text" name="OrigemOPM" placeholder="Origem OPM"> <br>
+
+                    <input class="form-control" type="text" name="DestinoGrandeComando" placeholder="Destino Grande Comando"> <br>
+                    <input class="form-control" type="text" name="DestinoOPM" placeholder="Destino OPM"> <br>
+
+                    <label for="batalhao">BATALHÃO</label>
+                    <select name="batalhao" id="batalhao">
+                      <option value="SIM">SIM</option>
+                      <option value="NÃO">NÃO</option>
+                    </select>
+
+                    <label for="baep">BAEP</label>
+                    <select name="baep" id="baep">
+                      <option value="SIM">SIM</option>
+                      <option value="NÃO">NÃO</option>
+                    </select>
+
+                    <br>
+                    <button class="btn btn-success">Verificar</button> 
+                    <hr>
+                    <input class="form-control" type="text" name="OrigemOPM" placeholder="Resultado"> <br>
+            </form>
+        </div>
+        </div>
+    </div>
+
+    
+<%- include ('../../partials/footer.ejs') %>
+
